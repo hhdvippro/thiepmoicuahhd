@@ -1,29 +1,83 @@
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <tiltle>Thiệp Mời Của Đăng Nè</tiltle>
-  <link rel="stylesheet" href="./css.css">
-  <script src=".\js.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Chụp Ảnh Kỷ Yếu - Hà Hải Đăng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            background: white;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d81b60;
+        }
+        .content {
+            font-size: 18px;
+            margin: 20px 0;
+            display: none;
+        }
+        .footer {
+            font-size: 16px;
+            color: #555;
+            display: none;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #d81b60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #c2185b;
+        }
+    </style>
+    <script>
+        function toggleContent() {
+            var content = document.querySelector('.content');
+            var footer = document.querySelector('.footer');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                footer.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+                footer.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
-<div class="container">  
-<div class="valentines">
-  <div class="envelope"></div>
-  <div class="front"></div>
-  <div class="card">
-  <div class="text">YEARBOOK INVITATION </br>ON SUNDAY 02.03.2025 DAY</br>HÀ HẢi ĐĂNG</div>
-  <div class="heart"</div>
-  </div>
-  <div class="hearts">
-    <div class="one"></div>
-    <div class="two"></div>
-    <div class="three"></div>
-    <div class="four"></div>
-    <div class="five"></div>
-  </div>
-</div>
-</div>
-<div class="shadow"></div>
-</div>
+    <div class="card" onclick="toggleContent()">
+        <div class="title">Bấm để mở thiệp mời 📜</div>
+        <div class="content">
+            🎉 Trân trọng kính mời bạn tham dự buổi chụp ảnh kỷ yếu cùng với Đăng Hà! 🎓✨
+            <br><br>
+            📅 Thời gian: 9:00 AM, Ngày 03/03/2025
+            <br>
+            📍 Địa điểm: Kí túc xá Khu B trường Hữu Nghị 80, thị xã Sơn Tây, Hà Nội
+            <br><br>
+            Hãy đến và cùng nhau lưu giữ những kỷ niệm đáng nhớ!
+        </div>
+        <div class="footer">
+            Hẹn gặp lại bạn trong buổi chụp ảnh! 📷🌟
+        </div>
+    </div>
 </body>
 </html>
